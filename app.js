@@ -1,4 +1,6 @@
 const moves = ['ROCK', 'PAPER', 'SCISSORS'];
+let player = 0;
+let computer = 0;
 
 function computerPlay(){
     const random = Math.floor(Math.random()*moves.length);
@@ -18,26 +20,40 @@ const playRound = (playerSelection, computerPlay)=>{
         break breakMe;}
         
         else if(playerSelection==moves[0] && computerPlay==moves[1]){
-            alert(`${computerPlay} Wins! ${computerPlay} beats ${playerSelection}`);
+            computer+=1;
         }
         else if(playerSelection==moves[1] && computerPlay==moves[0]){
-            alert(` ${playerSelection} Wins! ${playerSelection} beats ${computerPlay}`);
+            player+=1;
         }
         else if(playerSelection==moves[1]&&computerPlay==moves[2]){
-            alert(`${computerPlay} Wins! ${computerPlay} beats ${playerSelection}`);
+            computer+=1;
         }
         else if(playerSelection==moves[2]&&computerPlay==moves[1]){
-            alert(`${playerSelection} Wins! ${playerSelection} beats ${computerPlay}`);
+            player+=1;
         }
         else if(playerSelection==moves[2]&&computerPlay==moves[0]){
-            alert(`${computerPlay} Wins! ${computerPlay} beats ${playerSelection}`);
+            computer+=1;
         }
         else if(playerSelection==moves[0]&&computerPlay==moves[2]){
-            alert(`${playerSelection} Wins! ${playerSelection} beats ${computerPlay}`);
+            player+=1;
         }
-        else{
-            alert('Draw!')
-        }
+    }
+
+const game = ()=>{
+    for(let i=0;i<=5; i++){
+        playRound(playerSelection(), computerPlay());
+    }
+
+    if(computer>player){
+        alert(`AI Wins, Score:- AI: ${computer}, Player: ${player}`);
+    }
+    else if(player>computer){
+        alert(`Player Wins, Score:- Player: ${player}, AI: ${computer}`);
+    }
+    else if(player==computer){
+        alert(`Draw!, Score:- Player: ${player}, AI: ${computer}`)
+    }
+    
 }
 
-playRound(playerSelection(), computerPlay());
+game();
