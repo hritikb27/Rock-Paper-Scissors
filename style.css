@@ -1,0 +1,45 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightsteelblue;
+    margin: auto;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images div img{
+    border: 2px solid black;
+    height: 25vh;
+    width: 15vw;
+    transition: 0.1s;
+    background-color: lightslategray;
+}
+
+.images div img:hover{
+    scale: 1.1;
+}
+
+.score{
+    display: inline-flex;
+    gap: 10px;
+}
+
+#round{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.hideWinner{
+    display: none;
+}
