@@ -62,25 +62,3 @@ Array.from(getMove, (e)=>{
         round++;
     })
 });
-
-
-// OLD CODE (NOT IN USE ANYMORE!!!)
-
-// const game = ()=>{
-//     for(let i=0;i<=5; i++){
-//         playRound(playerSelection(), computerPlay());
-//     }
-
-//     if(computer>player){
-//         alert(`AI Wins, Score:- AI: ${computer}, Player: ${player}`);
-//     }
-//     else if(player>computer){
-//         alert(`Player Wins, Score:- Player: ${player}, AI: ${computer}`);
-//     }
-//     else if(player==computer){
-//         alert(`Draw!, Score:- Player: ${player}, AI: ${computer}`)
-//     }
-    
-// }
-
-// game();

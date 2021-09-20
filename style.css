@@ -18,16 +18,18 @@ body{
     gap: 10px;
 }
 
-.images div img{
+.images img{
     border: 2px solid black;
     height: 25vh;
     width: 15vw;
     transition: 0.1s;
     background-color: lightslategray;
+    flex-grow: 1;
 }
 
-.images div img:hover{
-    scale: 1.1;
+.images img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .score{
